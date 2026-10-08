@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Convertor</title>
+</head>
+<body>
+    <h1>Convertor Text-Număr și Număr-Text</h1>
+
+    <!-- Formular pentru conversia Text -> Număr -->
+    <h2>Text în Număr</h2>
+    <form method="post">
+        <label for="text">Introdu textul ASCII:</label><br>
+        <input type="text" id="text" name="text"><br><br>
+        <button type="submit">Convertește în Număr</button>
+    </form>
+    {% if text_to_number_result %}
+        <p>{{ text_to_number_result }}</p>
+    {% endif %}
+
+    <hr>
+
+    <!-- Formular pentru conversia Număr -> Text -->
+    <h2>Număr în Text</h2>
+    <form method="post">
+        <label for="number">Introdu numărul:</label><br>
+        <input type="text" id="number" name="number"><br><br>
+        <button type="submit">Convertește în Text</button>
+    </form>
+    {% if number_to_text_result %}
+        <p>{{ number_to_text_result }}</p>
+    {% endif %}
+    <br><br>
+    <a href="/">
+        <button> Revenire la meniul principal </button>
+    </a>
+</body>
+</html>

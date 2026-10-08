@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>???</title>
+</head>
+<body>
+    <h2>Indicii</h2>
+<input type="text" id="indicii" placeholder="Introdu un indiciu...">
+<button onclick="verificaIndiciu()">Verifică</button>
+
+<p id="mesaj" style="color:gray; font-style: italic;"></p>
+
+<script>
+    function verificaIndiciu() {
+        const input = document.getElementById("indicii").value.trim().toLowerCase();
+        const mesaj = document.getElementById("mesaj");
+
+        if (input === "tacere") {
+            window.location.href = "/tacere";
+        } else if (input === "tacerea") {
+            window.location.href = "/tacerea";
+        } else {
+            mesaj.innerText = "nu cred că la asta s-a gândit profesorul";
+        }
+    }
+</script>
+<hr>
+    <form action="/" method="post">
+        <label for="password">Nota acordata la dictarea sub forma de scrisoare este:</label>
+        <input type="password" name="password" required>
+        <button type="submit">Trimite</button>
+    </form>
+
+    {% if message %}
+        <p style="color:red;">{{ message }}</p>
+    {% endif %}
+
+    <hr>
+
+   
+   
+    <h1>Lista cu scule ce pot fi folosite in rezolvarea exercitiilor</h1>
+    <a href="/ascii_long">
+        <button>Convertor ASCII - NUMAR</button>
+    </a>
+    <br><br>
+    <a href="/spargator">
+    <button>Spargator de conturi</button>
+    <br><br>
+     <a href="/random_2_primes">
+        <button>Generator 2 prime aleator</button>
+    </a>
+</a>
+    <script>
+        function verificaIndiciu() {
+            const input = document.getElementById("indicii").value.trim().toLowerCase();
+
+            if (input === "tacere") {
+                window.location.href = "/tacere";
+            } else if (input === "tacerea") {
+                window.location.href = "/tacerea";
+            } else {
+                document.getElementById("eroare").innerText = "Indiciu greșit.";
+            }
+        }
+    </script>
+</body>
+</html>

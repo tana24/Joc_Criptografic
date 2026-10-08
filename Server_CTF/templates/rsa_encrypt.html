@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Criptare RSA</title>
+</head>
+<body>
+    <h1>Tăcerea abisului</h1>
+    <form method="post">
+    În căutarea adevărului, două numere sunt cheia,<br>
+        Publice, dar nu se văd, într-o lume ce tăcea.<br>
+        Intră pe calea virtuală, unde misterele se ascund,<br>
+        Acolo unde cifrele dansează, să-ți deschidă un nou fund.<br>
+        <br>
+        Numerele ce cauți sunt parte dintr-un joc,<br>
+        Fiecare e un pas, nu te lăsa deloc!<br>
+        Caută pagina ascunsă, găsește drumul de urmat,<br>
+        Soluția e aproape, doar să fii atent la ce-ai aflat.<br>
+        <br>
+        Nu am cum să-ți spun neicuță,<br>
+        Unui sus sub form de căsuță  <input type="text" id="e" name="e" required> <br>
+        Altu-I jos ca o căruță<br>
+        Oricât de departe ai ajunge, tot aproape ești, drăguță <input type="text" id="N" name="N" required><br>
+        
+        <button type="submit">Analizează</button>
+        
+    </form>
+    <br>
+    {% if encrypted_message %}
+        <h2>Mesaj:</h2>
+        <p>{{ encrypted_message }}</p>
+    {% endif %}
+    <a href="/">
+        <button> Revenire la meniul principal </button>
+    </a>
+</body>
+</html>

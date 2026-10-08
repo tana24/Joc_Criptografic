@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El, un șarlatan </title>
+</head>
+
+<body>
+    <h1>Sokoevski</h1>
+    <p>Dușmanul pe care nu-l pot ierta<br>Un adevarat hoț de secrete</p>
+    <img src="https://i.pinimg.com/564x/07/2a/ae/072aaeea1b1b10627c31374bbce707d7.jpg" width="1000" height="1000">
+</body>
+
+
+{% if message %}
+<p>{{ message }}</p>
+{% endif %}
+
+<br><br>
+Пе мѫсурэ че ани трэчеау, инвидия ши амбицийа сау трансформат ын обсесие. <br>
+Сокоевски а ынчепут сэ визезе ла ун цифру легендар, пе каре Антон л-а дзеволтат<br>
+ши каре ера капабил сэ протеже ориче информацие. Ера о комоарэ а куноштинцэлор, <br>
+Дакa май гăсестi чeстii пе каре нe știi сэ ле декриптeзи, уйтe, кeа естэ стърнутат,<br>
+яр Сокоевски воя сэ о аибэ пентру сине. Гындуриле луй ынтунекате ау ынчепут сэ-л консуме<br>
+Ну уйта, фaрa диaкритичe<br><br><br>
+
+1 - E ; 2 - M; 3 - U; 4 - O; 5 - I; 6 - T; 7 - A; 8 - N; 9 - V<br>
+
+<img src="{{ url_for('static', filename='sudoku.png') }}"
+     style="max-width:100%; height:auto;">
+
+
+    
+    <form method="POST">
+        <label for="motivatie">Secretul pătratului:</label>
+        <input type="text" id="motivatie" name="motivatie" required><br><br><br>
+        
+         <p>Sunt un număr, dar nu doar,<br>
+       Apar în criptografie, așa e felul meu.<br>
+       Din RSA, provin prin calcule meschine,<br>
+        Cu semnificația, pe grai românesc.<br>
+       Care sunt eu, care mă poftește?</p>
+
+        <label for="pastarnac">Mesaj, dar și cheie:</label>
+        <input type="text" id="pastarnac" name="pastarnac" required><br><br>
+
+        <button type="submit">Nu ai multe încercări</button>
+    </form>
+
+</html>
